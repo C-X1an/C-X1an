@@ -1,66 +1,66 @@
-<p align="center">
-<a href="https://github.com/C-X1an/C-X1an/blob/main/assets/project-map-dark.webp#gh-dark-mode-only">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/C-X1an/C-X1an/main/assets/project-map-mobile-dark.webp">
-  <img alt="Chong Xian’s project map: RelayFence as a permission gate, BranchHarbor as branching state snapshots with a recovery loop, and WattMosaic as incomplete sensor patterns resolving into a signal." src="https://raw.githubusercontent.com/C-X1an/C-X1an/main/assets/project-map-dark.webp#gh-dark-mode-only" width="100%">
-</picture>
-</a>
-<a href="https://github.com/C-X1an/C-X1an/blob/main/assets/project-map-light.webp#gh-light-mode-only">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/C-X1an/C-X1an/main/assets/project-map-mobile-light.webp">
-  <img alt="Chong Xian’s project map: RelayFence as a permission gate, BranchHarbor as branching state snapshots with a recovery loop, and WattMosaic as incomplete sensor patterns resolving into a signal." src="https://raw.githubusercontent.com/C-X1an/C-X1an/main/assets/project-map-light.webp#gh-light-mode-only" width="100%">
-</picture>
-</a>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/C-X1an/relayfence">Boundaries / RelayFence</a> ·
-  <a href="https://github.com/C-X1an/branchharbor">State / BranchHarbor</a> ·
-  <a href="https://github.com/C-X1an/WattMosaic">Signal / WattMosaic</a>
-</p>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/project-map-mobile-dark.webp">
+  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="./assets/project-map-mobile-light.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/project-map-dark.webp">
+  <img src="./assets/project-map-light.webp" alt="An illustrated engineering project map: RelayFence establishes boundaries, BranchHarbor manages versioned state, and WattMosaic turns incomplete sensor readings into forecasts." width="100%">
+</picture>
 
 # Chong Xian
 
 **Software engineering · secure systems · applied machine learning**
 
-I build backend systems and developer tools, with an interest in how permissions, durable state and imperfect data shape reliable software. Based in Singapore.
+*Building systems where trust boundaries, failure modes, and measurable behavior are part of the design.*
 
-[LinkedIn](https://www.linkedin.com/in/chong-xian/) · [Repositories](https://github.com/C-X1an?tab=repositories)
+[Explore my work](#selected-work) · [Engineering principles](#how-i-approach-engineering) · [LinkedIn](https://www.linkedin.com/in/chong-xian/)
+
+</div>
+
+---
+
+Based in Singapore. I work across backend and systems engineering, developer infrastructure, practical ML, and security-minded software. I prefer reproducible demonstrations and explicit limitations to claims a repository cannot substantiate.
 
 ## Selected work
 
-### [RelayFence](https://github.com/C-X1an/relayfence)
+| Project | Engineering focus | Explore |
+|:--|:--|:--|
+| **[RelayFence](https://github.com/C-X1an/relayfence)** | Experimental mTLS egress gateway with destination policy, live revocation, and auditable connection handling. **Go · network security** | [Architecture](https://github.com/C-X1an/relayfence/blob/main/ARCHITECTURE.md) · [Verification](https://github.com/C-X1an/relayfence/actions) |
+| **[BranchHarbor](https://github.com/C-X1an/branchharbor)** | Single-node versioned workspace system using scoped capabilities, content-addressed state, optimistic concurrency, and recovery. **Go · backend systems** | [API](https://github.com/C-X1an/branchharbor/blob/main/API.md) · [Verification](https://github.com/C-X1an/branchharbor/actions) |
+| **[FaultBraid](https://github.com/C-X1an/faultbraid)** | Experimental three-voter Raft workbench for fault injection, replay, reduction, and inspectable correctness evidence. **Go · distributed systems** | [Architecture](https://github.com/C-X1an/faultbraid/blob/main/ARCHITECTURE.md) · [Verification report](https://github.com/C-X1an/faultbraid/blob/main/VERIFICATION_REPORT.md) |
+| **[WattMosaic](https://github.com/C-X1an/WattMosaic)** | Forecasting campus energy demand when sensor readings are incomplete, with explicit missingness patterns and evaluation boundaries. **Python · applied ML** | [Methodology](https://github.com/C-X1an/WattMosaic#readme) · [Notebook](https://github.com/C-X1an/WattMosaic/blob/main/notebooks/WattMosaic.ipynb) |
 
-An experimental single-host mTLS egress gateway in Go, with exact destination policy and live revocation. The repository explains its architecture, threat model and deployment limits alongside executable verification.
+## More from the engineering lab
 
-[Architecture and threat model](https://github.com/C-X1an/relayfence#readme) · [Tests and CI](https://github.com/C-X1an/relayfence/actions)
+| Project | Question explored |
+|:--|:--|
+| **[BatchQuay](https://github.com/C-X1an/batchquay)** | How do original C++ transformer inference mechanics, request-owned KV pages, and bounded scheduling behave under cancellation and contention? |
+| **[RillScope](https://github.com/C-X1an/rillscope)** | How can a query compiler enforce host-defined data access boundaries without trusting user-supplied scope? |
+| **[FacetQuarry](https://github.com/C-X1an/facetquarry)** | What changes when nearest-neighbor search must respect tenant and metadata filters, with measured recall and work budgets? |
+| **[Driftline](https://github.com/C-X1an/driftline)** · **[EffectLatch](https://github.com/C-X1an/effectlatch)** | Exploratory developer tooling and bounded WebAssembly runtime work; refer to each repository for its current maturity and limitations. |
 
-### [BranchHarbor](https://github.com/C-X1an/branchharbor)
-
-A single-node, versioned workspace system in Go. Content-addressed state, scoped capabilities and optimistic concurrency make changes explicit; journal recovery and idempotent operations address failure paths. Experimental, with Linux filesystem prerequisites.
-
-[Design and API](https://github.com/C-X1an/branchharbor#readme) · [Verification](https://github.com/C-X1an/branchharbor/actions)
-
-### [WattMosaic](https://github.com/C-X1an/WattMosaic)
-
-Forecasting with incomplete campus sensor data, using 16 sensor-availability patterns. The public notebook illustrates missingness-mask construction and core/specialist routing. Competition data, trained weights and the full training pipeline are excluded from the public release.
-
-[Notebook and methodology](https://github.com/C-X1an/WattMosaic#readme) · [Notebook](https://github.com/C-X1an/WattMosaic/blob/main/notebooks/WattMosaic.ipynb)
+These are engineering experiments, not blanket production-readiness claims. Current support, validation status, and known limitations are documented in the relevant repositories.
 
 ## How I approach engineering
 
-- **Make boundaries visible.** Explain permissions, trust assumptions and limits before presenting a system as reliable.
-- **Test failure paths.** Treat concurrency, recovery and malformed inputs as part of the design.
-- **Keep evidence close to claims.** Publish runnable checks and distinguish experimental work from production readiness.
+**01 — Bound authority.** Make the trust model, permissions, and operational scope explicit.
 
-## More to explore
+**02 — Test failure paths.** Treat concurrency, malformed input, cancellation, and recovery as first-class behavior.
 
-[Driftline](https://github.com/C-X1an/driftline) explores semantic drift in Python projects. [EffectLatch](https://github.com/C-X1an/effectlatch) explores a bounded Rust/WebAssembly tool runtime and documents its unfinished acceptance work.
+**03 — Show the evidence.** Pair implementation with reproducible commands, meaningful tests, and source-bound results.
 
-**In these repositories:** Go · Python · Rust · SQL
+**04 — State the limits.** Distinguish completed verification from work still in progress.
 
-I’m continuing to develop secure backend systems, reproducible developer tooling and practical approaches to missing data.
+## Languages and areas
+
+**Languages:** Go · Python · Rust · C++ · JavaScript/TypeScript · SQL
+
+**Areas:** Backend and distributed systems · Security engineering · Developer infrastructure · Applied machine learning · Data-intensive applications · Full-stack development
+
+*My repositories demonstrate different levels of maturity across these areas; the code and evidence tell the detailed story.*
 
 ## Connect
 
-Find me on [LinkedIn](https://www.linkedin.com/in/chong-xian/) or explore the code above. For project-specific questions or reproducible bugs, use the relevant repository’s issue tracker.
+[LinkedIn](https://www.linkedin.com/in/chong-xian/) · [Browse repositories](https://github.com/C-X1an?tab=repositories)
+
+For reproducible bugs, implementation questions, or documentation feedback, open an issue in the relevant repository.
